@@ -1,0 +1,11 @@
+.section-title {
+  font-weight: $large-font-weight;
+  font-size: $large-font-size;
+  line-height: 1.16;
+  text-align: center;
+  color: $title-text-color;
+
+  &__indent {
+    margin-bottom: 50px;
+  }
+}

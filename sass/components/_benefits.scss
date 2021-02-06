@@ -1,0 +1,38 @@
+.benefits {
+  padding-top: 94px;
+  padding-bottom: 47px;
+}
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2px;
+  padding-bottom: 5px;
+
+  &__item {
+    width: 270px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__text {
+    font-weight: $regular-font-weight;
+    font-size: $regular-font-size;
+    line-height: $middle-line-height;
+  }
+
+  &__phon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+
+    background-color: $light-background-color;
+  }
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+  }
+}

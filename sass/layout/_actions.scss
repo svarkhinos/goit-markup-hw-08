@@ -1,0 +1,45 @@
+.actions {
+  display: flex;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 30px;
+  justify-content: space-between;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__link {
+    display: inline-flex;
+    padding: 12px;
+    border-radius: 50%;
+    color: $icons-color;
+
+    transition-property: color, background-color;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-timing-function;
+
+    &:hover,
+    &:focus {
+      color: $primary-white-color;
+      background-color: $accent-color;
+    }
+
+    &--color {
+      color: $primary-white-color;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+
+    &:hover,
+    &:focus {
+      fill: currentColor;
+    }
+  }
+}

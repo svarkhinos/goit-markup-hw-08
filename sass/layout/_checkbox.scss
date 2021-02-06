@@ -1,0 +1,49 @@
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: $regular-font-weight;
+  font-size: $regular-font-size;
+  line-height: $middle-line-height;
+
+  margin-bottom: 30px;
+
+  &__contract {
+    color: $accent-color;
+  }
+
+  &__link {
+    text-decoration-skip-ink: none;
+    text-decoration: underline;
+    color: $accent-color;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    border: 2px solid $title-text-color;
+    border-radius: 2px;
+
+    transition-property: background-color, border-color;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-timing-function;
+  }
+
+  &__input:focus ~ &__icon {
+    border-color: $accent-color;
+  }
+  &__input:checked ~ &__icon {
+    border-color: $accent-color;
+    background-color: $accent-color;
+    background-image: url(../images/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+  }
+}
+
+.check__input input[type='checkbox'] {
+  width: 40px;
+}

@@ -1,0 +1,49 @@
+.teem {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: $light-background-color;
+
+  &__title {
+    padding-bottom: 50px;
+  }
+}
+
+.teem-list {
+  display: flex;
+
+  &__item {
+    background: $primary-white-color;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.teem-member {
+  padding-top: 25px;
+  padding-bottom: 16px;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  &__description {
+    font-weight: $middle-font-weight;
+    font-size: $middle-font-size;
+    line-height: $regular-line-height;
+
+    text-align: center;
+    margin-bottom: 10px;
+
+    &--dark {
+      color: $title-text-color;
+    }
+    &--font {
+      font-weight: $regular-font-weight;
+      margin-bottom: 0;
+    }
+  }
+}
