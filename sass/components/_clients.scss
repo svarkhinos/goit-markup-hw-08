@@ -1,17 +1,38 @@
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 30px;
+    @media screen and (min-width: $desktop-width) {
+      font-size: $large-font-size;
+      line-height: 1.17;
+      margin-bottom: 50px;
+    }
+  }
 }
 
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
+
+  margin-left: -$portfolio-list-gap;
+  margin-top: -$portfolio-list-gap;
 
   &__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
+    width: 210px;
     height: 90px;
+    margin-left: $portfolio-list-gap;
+    margin-top: $portfolio-list-gap;
 
     border: 1px solid $icons-color;
     border-radius: 4px;
@@ -26,10 +47,13 @@
       border-color: $accent-color;
       color: $accent-color;
     }
-  }
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
+    @media screen and (min-width: $tablet-width) {
+      width: 226px;
+    }
+    @media screen and (min-width: $desktop-width) {
+      width: 170px;
+    }
   }
 
   &__icon {

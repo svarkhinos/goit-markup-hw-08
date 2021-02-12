@@ -1,40 +1,72 @@
 .hero {
-  padding-top: 201px;
-  padding-bottom: 201px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: $hero-background-color;
 
   &__title {
     font-weight: $bold-font-weight;
-    font-size: $title-font-size;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.61;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
-    margin-bottom: 30px;
-    color: $primary-white-color;
-  }
-
-  &__container {
-    width: 696px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
+    color: $primary-white-color;
+
+    @media screen and (min-width: $mobile-width) {
+      width: 360px;
+    }
   }
 }
 
+@media screen and (min-width: $desktop-width) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    &__title {
+      width: 696px;
+      font-size: $title-font-size;
+      line-height: 1.36;
+    }
+  }
+}
 .overlay {
   max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/Img_hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: linear-gradient($gradient),
+    url(../../images/hero/Img_hero_mobile1x.jpg);
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient($gradient),
+      url(../../images/hero/Img_hero_mobile2x.jpg);
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient($gradient),
+      url(../../images/hero/Img_hero_tablet1x.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient($gradient),
+        url(../../images/hero/Img_hero_tablet2x.jpg);
+    }
+  }
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient($gradient),
+      url(../../images/hero/Img_hero_desktop1x.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient($gradient),
+        url(../../images/hero/Img_hero_desktop2x.jpg);
+    }
+  }
 }

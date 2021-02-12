@@ -1,0 +1,21 @@
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $primary-white-color;
+
+  padding: 48px 40px;
+
+  z-index: 2;
+
+  &.is-open {
+    display: block;
+  }
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    position: relative;
+    padding: 0;
+  }
+}

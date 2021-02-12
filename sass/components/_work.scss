@@ -1,6 +1,9 @@
 .work {
-  padding-top: 47px;
+  display: none;
   padding-bottom: 94px;
+  @media screen and (min-width: $desktop-width) {
+    display: block;
+  }
 }
 
 .work-list {

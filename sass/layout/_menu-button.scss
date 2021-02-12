@@ -1,0 +1,32 @@
+.menu-button {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: transparent;
+  fill: #000000;
+
+  transition-property: fill;
+  transition-duration: $animation-duration;
+  transition-timing-function: $animation-timing-function;
+
+  &__icon-cross {
+    display: none;
+  }
+  &:hover {
+    fill: $accent-color;
+  }
+  z-index: 5;
+  @media screen and (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.menu-button.is-open .menu-button__icon-cross {
+  display: block;
+}
+.menu-button.is-open .menu-button__icon-menu {
+  display: none;
+}

@@ -1,14 +1,18 @@
 .actions {
   display: flex;
+  justify-content: center;
   padding-left: 32px;
   padding-right: 32px;
-  padding-bottom: 30px;
-  justify-content: space-between;
+  padding-bottom: 24px;
 
   &__item {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
   }
   &__link {
     display: inline-flex;

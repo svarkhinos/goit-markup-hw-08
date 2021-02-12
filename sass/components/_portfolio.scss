@@ -1,6 +1,10 @@
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .portfolio-header {
@@ -10,8 +14,23 @@
 .portfolio-filter {
   &__list {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+
+    margin-bottom: 25px;
+    @media screen and (min-width: $tablet-width) {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $desktop-width) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 15px;
+    @media screen and (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
   }
 
   &__item:not(:last-child) {
@@ -57,15 +76,28 @@
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-
-  margin-top: -$portfolio-list-gap;
-  margin-left: -$portfolio-list-gap;
+  @media screen and (min-width: $tablet-width) {
+    margin-top: -$portfolio-list-gap;
+    margin-left: -$portfolio-list-gap;
+  }
 
   &__item {
     outline: 1px solid #eeeeee;
-    flex-basis: calc(100% / 3 - 30px);
+    width: 450px;
 
-    margin-top: $portfolio-list-gap;
-    margin-left: $portfolio-list-gap;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      @media screen and (min-width: $tablet-width) {
+        margin-bottom: 0;
+      }
+    }
+    @media screen and (min-width: $tablet-width) {
+      margin-top: $portfolio-list-gap;
+      margin-left: $portfolio-list-gap;
+      width: 354px;
+    }
+    @media screen and (min-width: $desktop-width) {
+      width: 370px;
+    }
   }
 }
