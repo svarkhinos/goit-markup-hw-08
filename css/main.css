@@ -646,7 +646,13 @@ address {
 }
 
 .menu-container.is-open {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media screen and (min-width: 768px) {
@@ -713,7 +719,7 @@ address {
 }
 
 .nav-list {
-  margin-bottom: 302px;
+  margin-bottom: auto;
 }
 
 .nav-list__item:not(:last-child) {
