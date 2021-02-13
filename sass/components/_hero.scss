@@ -40,7 +40,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient($gradient),
-    url(../images/hero/Img_hero_mobile1x.jpg);
+    url(images/hero/Img_hero_mobile1x.jpg);
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -51,7 +51,7 @@
 
   @media (min-width: $tablet-width) {
     background-image: linear-gradient($gradient),
-      url(../images/hero/Img_hero_tablet1x.jpg);
+      url(/goit-markup-hw-08/images/hero/Img_hero_tablet1x.jpg);
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
@@ -61,7 +61,7 @@
   }
   @media (min-width: $desktop-width) {
     background-image: linear-gradient($gradient),
-      url(../images/hero/Img_hero_desktop1x.jpg);
+      url(../goit-markup-hw-08/images/hero/Img_hero_desktop1x.jpg);
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
